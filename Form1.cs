@@ -12,8 +12,7 @@ namespace LyricGenerator
 {
     public partial class MainForm : Form
     {
-
-        public FreqTable freqTable;
+        public List<Word> dict;
 
         public MainForm()
         {
@@ -30,29 +29,32 @@ namespace LyricGenerator
 
         void readIntoTable()
         {
-            char[] delim = { ' ', '.', ',', ':' };
-
             string toParse = Input.Text;
-            string[] parsed = toParse.Split(delim);
-
-            foreach(string s in parsed)
+            string[] parsed = toParse.Split('/');
+            for (int i = 0; i < 2; i++)
             {
-                freqTable.addToTable(s);   
+                if(i == 0)
+                {
+                    string[] parsed2 = toParse.Split(',');
+                    Word newWord = new Word(parsed2[0], Int32.Parse(parsed2[1]));
+                    if(dict.Contains(newWord))
+                    {
+                        dict.Where(Word => Word.word == parsed2[0]).ToList().ForEach(Word => Word.freq++);
+                    }
+                    else
+                    {
+                        dict.Add(newWord);
+                    }
+
+                }
+                else if(i == 1)
+                {
+
+                }
+
+                //freqTable.addToTable(s);   
             }
 
-        }
-    }
-
-    public class FreqTable
-    {
-        List<Word> list = new List<Word>();
-
-        FreqTable()
-        {}
-
-        public void addToTable(string s)
-        {
-            list.Add(s);
         }
     }
 
@@ -60,7 +62,13 @@ namespace LyricGenerator
     {
         public string word;
         public int freq;
+        public List<Word> listOfWord;
 
-
+        public Word(string w, int f)
+        {
+            word = w;
+            freq = f;
+        }
     }
+
 }
