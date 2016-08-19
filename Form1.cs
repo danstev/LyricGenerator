@@ -25,6 +25,25 @@ namespace LyricGenerator
 
         }
 
+        void readFromInput()
+        {
+            string input = Input.Text;
+            string[] parsed = input.Split(' ');
+            string previous;
+            foreach(string s in parsed)
+            {
+                if(checkIfInDict(s))
+                {
+                    addFreqToDict(s);
+                    previous = s;
+                }
+
+
+                
+                
+            }
+        }
+
         
 
         void readIntoTable()
@@ -50,11 +69,39 @@ namespace LyricGenerator
                 else if(i == 1)
                 {
 
-                }
-
-                //freqTable.addToTable(s);   
+                } 
             }
+        }
 
+        bool checkIfInDict(string checkString)
+        {
+            foreach(Word w in dict)
+            {
+                if(w.word == checkString)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        void addFreqToDict(string addFreqTarget)
+        {
+            List<Word> tempDict = new List<Word>();
+            foreach(Word w in dict)
+            {
+                if (w.word == addFreqTarget)
+                {
+                    Word tempAddFreq = w;
+                    tempAddFreq.freq++;
+                    tempDict.Add(tempAddFreq);
+                }
+                else
+                {
+                    tempDict.Add(w);
+                }
+            }
+            dict = tempDict;
         }
     }
 
