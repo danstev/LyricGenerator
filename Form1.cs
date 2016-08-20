@@ -8,6 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+/*
+Dan Steve Ward - 2016
+www.danstev.uk
+*/
+
 namespace LyricGenerator
 {
     public partial class MainForm : Form
@@ -58,7 +64,7 @@ namespace LyricGenerator
                     Word newWord = new Word(parsed2[0], Int32.Parse(parsed2[1]));
                     if(dict.Contains(newWord))
                     {
-                        dict.Where(Word => Word.word == parsed2[0]).ToList().ForEach(Word => Word.freq++);
+                        addFreqToDict(parsed2[0]);
                     }
                     else
                     {
