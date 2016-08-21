@@ -19,6 +19,7 @@ namespace LyricGenerator
     public partial class MainForm : Form
     {
         public List<Word> dict;
+        public Word previous;
 
         public MainForm()
         {
@@ -60,20 +61,28 @@ namespace LyricGenerator
             {
                 if(i == 0)
                 {
-                    string[] parsed2 = toParse.Split(',');
+                    string[] parsed2 = parsed[i].Split(',');
                     Word newWord = new Word(parsed2[0], Int32.Parse(parsed2[1]));
                     if(dict.Contains(newWord))
                     {
                         addFreqToDict(parsed2[0]);
+                        previous = newWord;
+                        return;
                     }
                     else
                     {
-                        dict.Add(newWord);
+                        //dict.Add(newWord);
                     }
 
                 }
                 else if(i == 1)
                 {
+                    string[] parsed2 = parsed[i].Split('.');
+                    for(int x = 0; x < parsed2.Length; x++)
+                    {
+                        string[] parsed3 = parsed2[i].Split(',');
+
+                    }
 
                 } 
             }
@@ -108,6 +117,47 @@ namespace LyricGenerator
                 }
             }
             dict = tempDict;
+        }
+
+        int getTotalWords(Word w)
+        {
+            int count = 0;
+            foreach(Word word in w.listOfWord)
+            {
+                count += word.freq;
+            }
+            return count;
+        }
+
+        string getWhichIsNext(Word w)
+        {
+            string[] nextWord = new string[w.listOfWord.Count];
+            int[] nextWordFreq = new int[w.listOfWord.Count];
+            int wordCount = 0;
+            int count = 0;
+
+            for (int i = 0; i < w.listOfWord.Count; i++)
+            {
+                nextWord[i] = w.listOfWord[i].word;
+                nextWordFreq[i] = w.listOfWord[i].freq;
+                wordCount++;
+                count += w.listOfWord[i].freq;
+            }
+
+            string[] words = new string[count];
+            int count2 = 0;
+
+            for(int i = 0; i < wordCount; i++)
+            {
+                for(int x = 0; x < nextWordFreq[i]; x++)
+                {
+                    words[count2] = nextWord[i];
+                    count2++;
+                }
+            }
+            Random rand = new Random();
+            int r = rand.Next(0, count);
+            return words[r];
         }
     }
 
