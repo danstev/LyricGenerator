@@ -32,19 +32,23 @@
             this.saveChain = new System.Windows.Forms.Button();
             this.loadChain = new System.Windows.Forms.Button();
             this.generateText = new System.Windows.Forms.Button();
+            this.SaveText = new System.Windows.Forms.Button();
+            this.Output = new System.Windows.Forms.RichTextBox();
+            this.chainStats = new System.Windows.Forms.RichTextBox();
+            this.ExportStats = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Input
             // 
-            this.Input.Location = new System.Drawing.Point(25, 50);
+            this.Input.Location = new System.Drawing.Point(25, 146);
             this.Input.Name = "Input";
-            this.Input.Size = new System.Drawing.Size(390, 480);
+            this.Input.Size = new System.Drawing.Size(390, 384);
             this.Input.TabIndex = 0;
             this.Input.Text = "";
             // 
             // saveChain
             // 
-            this.saveChain.Location = new System.Drawing.Point(846, 107);
+            this.saveChain.Location = new System.Drawing.Point(25, 35);
             this.saveChain.Name = "saveChain";
             this.saveChain.Size = new System.Drawing.Size(75, 23);
             this.saveChain.TabIndex = 1;
@@ -53,7 +57,7 @@
             // 
             // loadChain
             // 
-            this.loadChain.Location = new System.Drawing.Point(846, 168);
+            this.loadChain.Location = new System.Drawing.Point(106, 35);
             this.loadChain.Name = "loadChain";
             this.loadChain.Size = new System.Drawing.Size(75, 23);
             this.loadChain.TabIndex = 2;
@@ -62,18 +66,56 @@
             // 
             // generateText
             // 
-            this.generateText.Location = new System.Drawing.Point(478, 274);
+            this.generateText.Location = new System.Drawing.Point(441, 35);
             this.generateText.Name = "generateText";
             this.generateText.Size = new System.Drawing.Size(126, 23);
             this.generateText.TabIndex = 3;
             this.generateText.Text = "Generate Text";
             this.generateText.UseVisualStyleBackColor = true;
             // 
+            // SaveText
+            // 
+            this.SaveText.Location = new System.Drawing.Point(573, 35);
+            this.SaveText.Name = "SaveText";
+            this.SaveText.Size = new System.Drawing.Size(75, 23);
+            this.SaveText.TabIndex = 4;
+            this.SaveText.Text = "Save Text";
+            this.SaveText.UseVisualStyleBackColor = true;
+            // 
+            // Output
+            // 
+            this.Output.Location = new System.Drawing.Point(441, 146);
+            this.Output.Name = "Output";
+            this.Output.Size = new System.Drawing.Size(390, 384);
+            this.Output.TabIndex = 5;
+            this.Output.Text = "";
+            // 
+            // chainStats
+            // 
+            this.chainStats.Location = new System.Drawing.Point(853, 146);
+            this.chainStats.Name = "chainStats";
+            this.chainStats.Size = new System.Drawing.Size(229, 384);
+            this.chainStats.TabIndex = 6;
+            this.chainStats.Text = "";
+            // 
+            // ExportStats
+            // 
+            this.ExportStats.Location = new System.Drawing.Point(853, 35);
+            this.ExportStats.Name = "ExportStats";
+            this.ExportStats.Size = new System.Drawing.Size(75, 23);
+            this.ExportStats.TabIndex = 7;
+            this.ExportStats.Text = "Export Stats";
+            this.ExportStats.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1094, 555);
+            this.Controls.Add(this.ExportStats);
+            this.Controls.Add(this.chainStats);
+            this.Controls.Add(this.Output);
+            this.Controls.Add(this.SaveText);
             this.Controls.Add(this.generateText);
             this.Controls.Add(this.loadChain);
             this.Controls.Add(this.saveChain);
@@ -91,6 +133,10 @@
         private System.Windows.Forms.Button saveChain;
         private System.Windows.Forms.Button loadChain;
         private System.Windows.Forms.Button generateText;
+        private System.Windows.Forms.Button SaveText;
+        private System.Windows.Forms.RichTextBox Output;
+        private System.Windows.Forms.RichTextBox chainStats;
+        private System.Windows.Forms.Button ExportStats;
     }
 }
 
