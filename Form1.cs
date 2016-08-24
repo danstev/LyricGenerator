@@ -159,6 +159,31 @@ namespace LyricGenerator
             int r = rand.Next(0, count);
             return words[r];
         }
+
+        private void saveChain_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loadChain_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void generateText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExportStats_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public class Word

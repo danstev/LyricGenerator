@@ -54,6 +54,7 @@
             this.saveChain.TabIndex = 1;
             this.saveChain.Text = "Save Chain";
             this.saveChain.UseVisualStyleBackColor = true;
+            this.saveChain.Click += new System.EventHandler(this.saveChain_Click);
             // 
             // loadChain
             // 
@@ -63,6 +64,7 @@
             this.loadChain.TabIndex = 2;
             this.loadChain.Text = "Load Chain";
             this.loadChain.UseVisualStyleBackColor = true;
+            this.loadChain.Click += new System.EventHandler(this.loadChain_Click);
             // 
             // generateText
             // 
@@ -72,6 +74,7 @@
             this.generateText.TabIndex = 3;
             this.generateText.Text = "Generate Text";
             this.generateText.UseVisualStyleBackColor = true;
+            this.generateText.Click += new System.EventHandler(this.generateText_Click);
             // 
             // SaveText
             // 
@@ -81,6 +84,7 @@
             this.SaveText.TabIndex = 4;
             this.SaveText.Text = "Save Text";
             this.SaveText.UseVisualStyleBackColor = true;
+            this.SaveText.Click += new System.EventHandler(this.SaveText_Click);
             // 
             // Output
             // 
@@ -106,6 +110,7 @@
             this.ExportStats.TabIndex = 7;
             this.ExportStats.Text = "Export Stats";
             this.ExportStats.UseVisualStyleBackColor = true;
+            this.ExportStats.Click += new System.EventHandler(this.ExportStats_Click);
             // 
             // MainForm
             // 
