@@ -162,7 +162,22 @@ namespace LyricGenerator
 
         private void saveChain_Click(object sender, EventArgs e)
         {
-
+            foreach(Word w in dict)
+            {
+                string save = "";
+                save += w.word;
+                save += ",";
+                save += w.freq;
+                save += "/";
+                foreach(Word b in w.listOfWord)
+                {
+                    save += b.word;
+                    save += ",";
+                    save += b.freq;
+                    save += ".";
+                }
+                Console.Write(save);
+            }
         }
 
         private void loadChain_Click(object sender, EventArgs e)
