@@ -162,7 +162,8 @@ namespace LyricGenerator
 
         private void saveChain_Click(object sender, EventArgs e)
         {
-            foreach(Word w in dict)
+            string path = "C:\\User\\Public\\Chains\\chainTest.txt";
+            foreach (Word w in dict)
             {
                 string save = "";
                 save += w.word;
@@ -176,7 +177,7 @@ namespace LyricGenerator
                     save += b.freq;
                     save += ".";
                 }
-                Console.Write(save);
+                System.IO.File.WriteAllText(path, save);
             }
         }
 
