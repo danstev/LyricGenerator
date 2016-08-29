@@ -18,7 +18,7 @@ namespace LyricGenerator
 {
     public partial class MainForm : Form
     {
-        public List<Word> dict;
+        public List<Word> dict = new List<Word> { };
         public Word previous;
 
         public MainForm()
@@ -55,23 +55,32 @@ namespace LyricGenerator
 
         void readIntoTable()
         {
+            //Get string
             string toParse = Input.Text;
+            //Parse the word and freq, from the next words
             string[] parsed = toParse.Split('/');
             for (int i = 0; i < 2; i++)
             {
+                //Word and freq
                 if(i == 0)
                 {
+                    //split word and freq
                     string[] parsed2 = parsed[i].Split(',');
+                    //Put into new word
                     Word newWord = new Word(parsed2[0], Int32.Parse(parsed2[1]));
+                    //If it contains word
                     if(dict.Contains(newWord))
                     {
+                        //Add freq ++
                         addFreqToDict(parsed2[0]);
+                        //save previous
                         previous = newWord;
+                        //exit loop
                         return;
                     }
                     else
                     {
-                        //dict.Add(newWord);
+                        dict.Add(newWord);
                     }
 
                 }
@@ -178,7 +187,7 @@ namespace LyricGenerator
             return words[r];
         }
 
-        private void saveChain_Click(object sender, EventArgs e)
+        private void saveChainAction()
         {
             string path = "C:\\User\\Public\\Chains\\chainTest.txt";
             foreach (Word w in dict)
@@ -188,7 +197,7 @@ namespace LyricGenerator
                 save += ",";
                 save += w.freq;
                 save += "/";
-                foreach(Word b in w.listOfWord)
+                foreach (Word b in w.listOfWord)
                 {
                     save += b.word;
                     save += ",";
@@ -196,6 +205,31 @@ namespace LyricGenerator
                     save += ".";
                 }
                 System.IO.File.WriteAllText(path, save);
+            }
+        }
+
+        private bool checkIfDictIsEmpty()
+        {
+            if( dict.Count <= 0)
+            {
+                return false;
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
+
+        private void saveChain_Click(object sender, EventArgs e)
+        {
+           if(checkIfDictIsEmpty())
+            {
+                saveChainAction();
+            }
+           else
+            {
+                Output.Text = "The chain is empty, add some information in first.";
             }
         }
 
