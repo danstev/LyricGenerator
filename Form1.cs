@@ -245,6 +245,9 @@ namespace LyricGenerator
 
         private void SaveText_Click(object sender, EventArgs e)
         {
+            string path = "C:\\User\\Public\\Chains\\chainTest.txt";
+            System.IO.File.WriteAllText(path, Output.Text);
+            
 
         }
 
