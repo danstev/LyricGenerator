@@ -247,8 +247,6 @@ namespace LyricGenerator
         {
             string path = "C:\\User\\Public\\Chains\\chainTest.txt";
             System.IO.File.WriteAllText(path, Output.Text);
-            
-
         }
 
         private void ExportStats_Click(object sender, EventArgs e)
@@ -268,6 +266,18 @@ namespace LyricGenerator
             word = w;
             freq = f;
         }
+
+        int getTotalFreq()
+        {
+            int x = 0;
+            foreach(Word w in listOfWord)
+            {
+                x = w.freq;
+            }
+            return x;
+        }
+
+
     }
 
 }
