@@ -40,15 +40,15 @@
             // 
             // Input
             // 
-            this.Input.Location = new System.Drawing.Point(25, 146);
+            this.Input.Location = new System.Drawing.Point(45, 146);
             this.Input.Name = "Input";
-            this.Input.Size = new System.Drawing.Size(390, 384);
+            this.Input.Size = new System.Drawing.Size(420, 384);
             this.Input.TabIndex = 0;
             this.Input.Text = "";
             // 
             // saveChain
             // 
-            this.saveChain.Location = new System.Drawing.Point(25, 35);
+            this.saveChain.Location = new System.Drawing.Point(45, 35);
             this.saveChain.Name = "saveChain";
             this.saveChain.Size = new System.Drawing.Size(75, 23);
             this.saveChain.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             // loadChain
             // 
-            this.loadChain.Location = new System.Drawing.Point(106, 35);
+            this.loadChain.Location = new System.Drawing.Point(126, 35);
             this.loadChain.Name = "loadChain";
             this.loadChain.Size = new System.Drawing.Size(75, 23);
             this.loadChain.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             // generateText
             // 
-            this.generateText.Location = new System.Drawing.Point(441, 35);
+            this.generateText.Location = new System.Drawing.Point(471, 35);
             this.generateText.Name = "generateText";
             this.generateText.Size = new System.Drawing.Size(126, 23);
             this.generateText.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             // SaveText
             // 
-            this.SaveText.Location = new System.Drawing.Point(573, 35);
+            this.SaveText.Location = new System.Drawing.Point(603, 35);
             this.SaveText.Name = "SaveText";
             this.SaveText.Size = new System.Drawing.Size(75, 23);
             this.SaveText.TabIndex = 4;
@@ -88,23 +88,23 @@
             // 
             // Output
             // 
-            this.Output.Location = new System.Drawing.Point(441, 146);
+            this.Output.Location = new System.Drawing.Point(471, 146);
             this.Output.Name = "Output";
-            this.Output.Size = new System.Drawing.Size(390, 384);
+            this.Output.Size = new System.Drawing.Size(420, 384);
             this.Output.TabIndex = 5;
             this.Output.Text = "";
             // 
             // chainStats
             // 
-            this.chainStats.Location = new System.Drawing.Point(853, 146);
+            this.chainStats.Location = new System.Drawing.Point(911, 146);
             this.chainStats.Name = "chainStats";
-            this.chainStats.Size = new System.Drawing.Size(229, 384);
+            this.chainStats.Size = new System.Drawing.Size(123, 384);
             this.chainStats.TabIndex = 6;
             this.chainStats.Text = "";
             // 
             // ExportStats
             // 
-            this.ExportStats.Location = new System.Drawing.Point(853, 35);
+            this.ExportStats.Location = new System.Drawing.Point(911, 35);
             this.ExportStats.Name = "ExportStats";
             this.ExportStats.Size = new System.Drawing.Size(75, 23);
             this.ExportStats.TabIndex = 7;
