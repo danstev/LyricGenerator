@@ -36,6 +36,7 @@
             this.Output = new System.Windows.Forms.RichTextBox();
             this.chainStats = new System.Windows.Forms.RichTextBox();
             this.ExportStats = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // Input
@@ -48,12 +49,13 @@
             // 
             // saveChain
             // 
+            this.saveChain.BackColor = System.Drawing.SystemColors.Control;
             this.saveChain.Location = new System.Drawing.Point(45, 35);
             this.saveChain.Name = "saveChain";
             this.saveChain.Size = new System.Drawing.Size(75, 23);
             this.saveChain.TabIndex = 1;
             this.saveChain.Text = "Save Chain";
-            this.saveChain.UseVisualStyleBackColor = true;
+            this.saveChain.UseVisualStyleBackColor = false;
             this.saveChain.Click += new System.EventHandler(this.saveChain_Click);
             // 
             // loadChain
@@ -112,6 +114,10 @@
             this.ExportStats.UseVisualStyleBackColor = true;
             this.ExportStats.Click += new System.EventHandler(this.ExportStats_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,6 +148,7 @@
         private System.Windows.Forms.RichTextBox Output;
         private System.Windows.Forms.RichTextBox chainStats;
         private System.Windows.Forms.Button ExportStats;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
