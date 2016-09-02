@@ -245,13 +245,28 @@ namespace LyricGenerator
 
         private void SaveText_Click(object sender, EventArgs e)
         {
-            string path = "C:\\User\\Public\\Chains\\chainTest.txt";
+            if(Output.Text == null)
+            {
+                Output.Text = " ";
+            }
+            string path = getPath();
             System.IO.File.WriteAllText(path, Output.Text);
         }
 
         private void ExportStats_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private string getPath()
+        {
+            DialogResult result = openFileDialog1.ShowDialog();
+            if(result == DialogResult.OK)
+            {
+                Console.Write(openFileDialog1.FileName);
+                return openFileDialog1.FileName;
+            } 
+            return "Error";
         }
     }
 
