@@ -14,6 +14,27 @@ Dan Steve Ward - 2016
 www.danstev.uk
 */
 
+/*
+Plan:
+
+1. Adding words to data structure
+    Fix input algorithm
+    Add previous word to implementation
+
+2. Context checker
+    Get word structure
+    Check it makes a sentence
+
+3. Custom options for generation
+    Amount of lines
+    Length of lines
+
+4. Weight out-of-context words
+    Get nouns
+    Check against verbs
+
+
+*/
 namespace LyricGenerator
 {
     public partial class MainForm : Form
