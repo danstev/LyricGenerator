@@ -290,6 +290,23 @@ namespace LyricGenerator
             return x;
         }
 
+        void addToList(string w)
+        {
+
+
+        }
+
+        bool checkWord(string word)
+        {
+            foreach(Word w in listOfWord)
+            {
+                if(w.word == word)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
     }
 
