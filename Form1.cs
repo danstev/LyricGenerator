@@ -53,27 +53,6 @@ namespace LyricGenerator
 
         }
 
-        void readFromInput()
-        {
-            string input = Input.Text;
-            string[] parsed = input.Split(' ');
-            string previous;
-            foreach(string s in parsed)
-            {
-                if(checkIfInDict(s))
-                {
-                    addFreqToDict(s);
-                    previous = s;
-                }
-
-
-                
-                
-            }
-        }
-
-        
-
         void readIntoTable()
         {
             //Get string
@@ -103,7 +82,6 @@ namespace LyricGenerator
                     {
                         dict.Add(newWord);
                     }
-
                 }
                 else if(i == 1)
                 {
@@ -111,7 +89,6 @@ namespace LyricGenerator
                     for(int x = 0; x < parsed2.Length; x++)
                     {
                         string[] parsed3 = parsed2[i].Split(',');
-
                     }
 
                 } 
