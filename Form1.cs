@@ -290,10 +290,24 @@ namespace LyricGenerator
             return x;
         }
 
-        void addToList(string w)
+        void addToListNext(string w)
         {
+            if( checkWord(w) )
+            {
+                foreach (Word words in listOfWord)
+                {
+                    if( words.word == w)
+                    {
+                        words.freq++;
+                    }
+                }
 
-
+            }
+            else
+            {
+                Word add = new Word(w, 1);
+                listOfWord.Add(add);
+            }
         }
 
         bool checkWord(string word)
