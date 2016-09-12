@@ -53,6 +53,29 @@ namespace LyricGenerator
 
         }
 
+        void addToChain()
+        {
+            string toParse = Input.Text;
+            string[] parsed = toParse.Split(' ');
+            foreach(string s in parsed)
+            {
+
+            } 
+        }
+
+        void addTiDict(string s)
+        {
+            if(checkIfInDict(s))
+            {
+                addFreqToDict(s);
+            }
+            else
+            {
+                Word check = new Word(s, 1);
+
+            }
+        }
+
         void readIntoTable()
         {
             //Get string
@@ -292,7 +315,7 @@ namespace LyricGenerator
 
         void addToListNext(Word w)
         {
-            if( checkWord(w.word) )
+            if( checkWord(w.word) ) //Do this in this function, so its not done twice
             {
                 foreach (Word words in listOfWord)
                 {
@@ -310,7 +333,7 @@ namespace LyricGenerator
             }
         }
 
-        bool checkWord(string word)
+        bool checkWord(string word) //Maybe unneeded
         {
             foreach(Word w in listOfWord)
             {
