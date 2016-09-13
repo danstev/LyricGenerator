@@ -39,8 +39,9 @@ namespace LyricGenerator
 {
     public partial class MainForm : Form
     {
-        public List<Word> dict = new List<Word> { };
-        public Word previous;
+        private List<Word> dict = new List<Word> { };
+        private Word previous;
+        public int amountOfWords = 100;
 
         public MainForm()
         {
@@ -49,8 +50,7 @@ namespace LyricGenerator
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
-
+            Input.Text = "Please load a chain before you try to generate content.";
         }
 
         void addToChain()
@@ -261,6 +261,23 @@ namespace LyricGenerator
 
         private void generateText_Click(object sender, EventArgs e)
         {
+            //string here
+            string toUse = Output.Text;
+            Word currentWord;
+            if( checkIfInDict( Output.Text ) )
+            {
+                for(int i = 0; i < amountOfWords; i++)
+                {
+                    currentWord = getWord(toUse);
+                    toUse = getWhichIsNext(currentWord);
+                    Output.Text += " ";
+                    Output.Text += toUse;
+                }
+            }
+            else
+            {
+                Output.Text = "That word is not in the dictionary. Please load a chain which has that word, or change the word.";
+            }
 
         }
 
@@ -288,6 +305,17 @@ namespace LyricGenerator
                 return openFileDialog1.FileName;
             } 
             return "Error";
+        }
+
+        private Word getWord(string w)
+        {
+            foreach (Word b in dict)
+            {
+                if (b.word == w) return b;
+                else return null;
+            }
+            Output.Text += "/n The previous word was not found in the dictionary.";
+            return null;
         }
     }
 
