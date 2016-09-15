@@ -231,15 +231,8 @@ namespace LyricGenerator
 
         private bool checkIfDictIsEmpty()
         {
-            if( dict.Count <= 0)
-            {
-                return false;
-            }
-            else
-            {
-                return false;
-            }
-            
+            if( dict.Count <= 0){return false;}
+            else{return false;}
         }
 
         private void saveChain_Click(object sender, EventArgs e)
