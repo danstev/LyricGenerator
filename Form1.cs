@@ -214,16 +214,10 @@ namespace LyricGenerator
             foreach (Word w in dict)
             {
                 string save = "";
-                save += w.word;
-                save += ",";
-                save += w.freq;
-                save += "/";
+                save = w.word + "," + w.freq + "/";
                 foreach (Word b in w.listOfWord)
                 {
-                    save += b.word;
-                    save += ",";
-                    save += b.freq;
-                    save += ".";
+                    save += b.word + "," + b.freq + ".";
                 }
                 System.IO.File.WriteAllText(path, save);
             }
@@ -255,7 +249,7 @@ namespace LyricGenerator
         private void generateText_Click(object sender, EventArgs e)
         {
             //string here
-            string toUse = Output.Text;
+            string toUse = Output.Text; //Should be changed to "Enter a word to start with: "
             Word currentWord;
             if( checkIfInDict( Output.Text ) )
             {
