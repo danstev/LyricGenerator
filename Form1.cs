@@ -298,7 +298,7 @@ namespace LyricGenerator
             DialogResult result = openFileDialog1.ShowDialog();
             if(result == DialogResult.OK)
             {
-                Console.Write(openFileDialog1.FileName);
+                //Console.Write(openFileDialog1.FileName); Unneeded for now
                 return openFileDialog1.FileName;
             } 
             return "Error";
