@@ -333,7 +333,7 @@ namespace LyricGenerator
             int x = 0;
             foreach(Word w in listOfWord)
             {
-                x = w.freq;
+                x += w.freq;
             }
             return x;
         }
@@ -369,6 +369,8 @@ namespace LyricGenerator
             }
             return false;
         }
+
+
 
     }
 
