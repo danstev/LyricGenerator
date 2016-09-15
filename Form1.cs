@@ -268,10 +268,14 @@ namespace LyricGenerator
             {
                 for(int i = 0; i < amountOfWords; i++)
                 {
+                    //Word for current word
                     currentWord = getWord(toUse);
+                    //Use word to get next word
                     toUse = getWhichIsNext(currentWord);
                     Output.Text += " ";
                     Output.Text += toUse;
+
+                    //Repeat
                 }
             }
             else
