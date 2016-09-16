@@ -314,6 +314,24 @@ namespace LyricGenerator
         private void ExportStats_Click(object sender, EventArgs e)
         {
 
+            //Get stats
+
+            //Process for each item in chain
+
+            //Words
+            int count = 0;
+            //Word input
+            int totalFreq = 0;
+            //Most used word
+            string MostUsed = "";
+            
+
+            foreach(Word w in dict)
+            {
+                count++;
+                totalFreq += w.freq;
+            }
+
         }
 
         private string getPath()
