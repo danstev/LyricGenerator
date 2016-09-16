@@ -243,6 +243,35 @@ namespace LyricGenerator
 
         private void loadChain_Click(object sender, EventArgs e)
         {
+            string toParse = Input.Text;
+            string[] parsed = toParse.Split('/');
+            for (int i = 0; i < 2; i++)
+            {
+                if (i == 0)
+                {
+                    string[] parsed2 = parsed[i].Split(',');
+                    Word newWord = new Word(parsed2[0], Int32.Parse(parsed2[1]));
+                    if (dict.Contains(newWord))
+                    {
+                        addFreqToDict(parsed2[0]);
+                        previous = newWord;
+                        return;
+                    }
+                    else
+                    {
+                        dict.Add(newWord);
+                    }
+                }
+                else if (i == 1)
+                {
+                    string[] parsed2 = parsed[i].Split('.');
+                    for (int x = 0; x < parsed2.Length; x++)
+                    {
+                        string[] parsed3 = parsed2[i].Split(',');
+                    }
+
+                }
+            }
 
         }
 
