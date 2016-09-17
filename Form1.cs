@@ -324,12 +324,20 @@ namespace LyricGenerator
             int totalFreq = 0;
             //Most used word
             string MostUsed = "";
+            //For comparison
+            Word prev;
             
 
             foreach(Word w in dict)
             {
+                
                 count++;
                 totalFreq += w.freq;
+
+                prev = w;
+                if (w.freq > prev.freq)
+                    MostUsed = w.word;
+
             }
 
         }
