@@ -296,6 +296,7 @@ namespace LyricGenerator
             }
             else
             {
+                //Perhaps pop up a text bos here with this instead.
                 Output.Text = "That word is not in the dictionary. Please load a chain which has that word, or change the word.";
             }
 
@@ -360,6 +361,7 @@ namespace LyricGenerator
                 if (b.word == w) return b;
                 else return null;
             }
+            //Does this work?
             Output.Text += "/n The previous word was not found in the dictionary.";
             return null;
         }
