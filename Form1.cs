@@ -359,7 +359,6 @@ namespace LyricGenerator
             foreach (Word b in dict)
             {
                 if (b.word == w) return b;
-                else return null;
             }
             //Does this work?
             Output.Text += "/n The previous word was not found in the dictionary.";
