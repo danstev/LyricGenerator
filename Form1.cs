@@ -376,6 +376,8 @@ namespace LyricGenerator
         {
             word = w;
             freq = f;
+            Word s = new Word("",0);
+            listOfWord.Add(s);
         }
 
         int getTotalFreq()
