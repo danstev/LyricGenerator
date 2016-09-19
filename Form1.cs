@@ -59,11 +59,11 @@ namespace LyricGenerator
             string[] parsed = toParse.Split(' ');
             foreach(string s in parsed)
             {
-
+                addToDict(s);
             } 
         }
 
-        void addTiDict(string s)
+        void addToDict(string s)
         {
             if(checkIfInDict(s))
             {
