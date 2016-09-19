@@ -72,7 +72,6 @@ namespace LyricGenerator
             else
             {
                 Word check = new Word(s, 1);
-
             }
         }
 
@@ -113,7 +112,6 @@ namespace LyricGenerator
                     {
                         string[] parsed3 = parsed2[i].Split(',');
                     }
-
                 } 
             }
         }
@@ -269,10 +267,8 @@ namespace LyricGenerator
                     {
                         string[] parsed3 = parsed2[i].Split(',');
                     }
-
                 }
             }
-
         }
 
         private void generateText_Click(object sender, EventArgs e)
@@ -290,8 +286,6 @@ namespace LyricGenerator
                     toUse = getWhichIsNext(currentWord);
                     Output.Text += " ";
                     Output.Text += toUse;
-
-                    //Repeat
                 }
             }
             else
@@ -299,7 +293,6 @@ namespace LyricGenerator
                 //Perhaps pop up a text bos here with this instead.
                 Output.Text = "That word is not in the dictionary. Please load a chain which has that word, or change the word.";
             }
-
         }
 
         private void SaveText_Click(object sender, EventArgs e)
@@ -314,11 +307,6 @@ namespace LyricGenerator
 
         private void ExportStats_Click(object sender, EventArgs e)
         {
-
-            //Get stats
-
-            //Process for each item in chain
-
             //Words
             int count = 0;
             //Word input
@@ -327,20 +315,15 @@ namespace LyricGenerator
             string MostUsed = "";
             //For comparison
             Word prev;
-            
 
             foreach(Word w in dict)
-            {
-                
+            { 
                 count++;
                 totalFreq += w.freq;
-
                 prev = w;
                 if (w.freq > prev.freq)
                     MostUsed = w.word;
-
             }
-
         }
 
         private string getPath()
@@ -421,8 +404,6 @@ namespace LyricGenerator
             }
             return false;
         }
-
-
 
     }
 
