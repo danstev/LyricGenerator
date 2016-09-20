@@ -111,7 +111,9 @@ namespace LyricGenerator
                     string[] parsed2 = parsed[i].Split('.');
                     for(int x = 0; x < parsed2.Length; x++)
                     {
-                        string[] parsed3 = parsed2[i].Split(',');
+                        string[] parsed3 = parsed2[x].Split(',');
+                        Word w = new Word(parsed3[0], Int32.toInt(parsed3[1]));
+                        dict.Add(w);
                     }
                 } 
             }
