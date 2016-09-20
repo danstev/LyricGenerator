@@ -56,7 +56,7 @@ namespace LyricGenerator
         void addToChain()
         {
             string toParse = Input.Text;
-            string[] parsed = toParse.Split(' ');
+            string[] parsed = toParse.Split(' ', ',', '.', '!', '?');
             foreach(string s in parsed)
             {
                 addToDict(s);
@@ -72,6 +72,7 @@ namespace LyricGenerator
             else
             {
                 Word check = new Word(s, 1);
+                dict.Add(check);
             }
         }
 
