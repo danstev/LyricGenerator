@@ -208,7 +208,7 @@ namespace LyricGenerator
 
         private void saveChainAction()
         {
-            string path = "C:\\User\\Public\\Chains\\chainTest.txt";
+            string path = getPath();
             foreach (Word w in dict)
             {
                 string save = "";
