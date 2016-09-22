@@ -162,50 +162,29 @@ namespace LyricGenerator
 
         string getWhichIsNext(Word w)
         {
-            //Init words with exact count
             string[] nextWord = new string[w.listOfWord.Count];
-            //Same with amount of times the word came next
             int[] nextWordFreq = new int[w.listOfWord.Count];
-            //Count for use in loop
             int wordCount = 0;
-            //Same
             int count = 0;
-
-            //Populate the arrays
             for (int i = 0; i < w.listOfWord.Count; i++)
             {
-                //Populate with word
                 nextWord[i] = w.listOfWord[i].word;
-                //Populate with frequency used
                 nextWordFreq[i] = w.listOfWord[i].freq;
-                //add word count
                 wordCount++;
-                //Add freq
                 count += w.listOfWord[i].freq;
             }
-
-            //New array with sum of all words freq size
             string[] words = new string[count];
-            //Another count for use in loop
             int count2 = 0;
-
-            //for each word
             for(int i = 0; i < wordCount; i++)
             {
-                //for each freqenecy for word used
                 for(int x = 0; x < nextWordFreq[i]; x++)
                 {
-                    //populate words
                     words[count2] = nextWord[i];
                     count2++;
                 }
             }
-            //New random so i can generate numbers
             Random rand = new Random();
-            //random number from 0 to count, randomly
-            //But obviously more used words get more chance to be used
             int r = rand.Next(0, count);
-            //Return the random word for use.
             return words[r];
         }
 
