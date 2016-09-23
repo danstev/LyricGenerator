@@ -340,7 +340,7 @@ namespace LyricGenerator
         {
             word = w;
             freq = f;
-            Word s = new Word("",0);
+            Word s = new Word(null,0);
             listOfWord.Add(s);
         }
 
