@@ -325,7 +325,6 @@ namespace LyricGenerator
             {
                 if (b.word == w) return b;
             }
-            //Does this work?
             Output.Text += "/n The previous word was not found in the dictionary.";
             return null;
         }
