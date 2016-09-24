@@ -41,9 +41,9 @@
             // 
             // Input
             // 
-            this.Input.Location = new System.Drawing.Point(45, 146);
+            this.Input.Location = new System.Drawing.Point(45, 96);
             this.Input.Name = "Input";
-            this.Input.Size = new System.Drawing.Size(420, 384);
+            this.Input.Size = new System.Drawing.Size(420, 434);
             this.Input.TabIndex = 0;
             this.Input.Text = "";
             // 
@@ -90,17 +90,17 @@
             // 
             // Output
             // 
-            this.Output.Location = new System.Drawing.Point(471, 146);
+            this.Output.Location = new System.Drawing.Point(471, 96);
             this.Output.Name = "Output";
-            this.Output.Size = new System.Drawing.Size(420, 384);
+            this.Output.Size = new System.Drawing.Size(420, 434);
             this.Output.TabIndex = 5;
             this.Output.Text = "";
             // 
             // chainStats
             // 
-            this.chainStats.Location = new System.Drawing.Point(911, 146);
+            this.chainStats.Location = new System.Drawing.Point(911, 96);
             this.chainStats.Name = "chainStats";
-            this.chainStats.Size = new System.Drawing.Size(123, 384);
+            this.chainStats.Size = new System.Drawing.Size(123, 268);
             this.chainStats.TabIndex = 6;
             this.chainStats.Text = "";
             // 
