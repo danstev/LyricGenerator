@@ -37,6 +37,7 @@
             this.chainStats = new System.Windows.Forms.RichTextBox();
             this.ExportStats = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.removeNonsense = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Input
@@ -118,11 +119,22 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // removeNonsense
+            // 
+            this.removeNonsense.AutoSize = true;
+            this.removeNonsense.Location = new System.Drawing.Point(911, 370);
+            this.removeNonsense.Name = "removeNonsense";
+            this.removeNonsense.Size = new System.Drawing.Size(117, 17);
+            this.removeNonsense.TabIndex = 8;
+            this.removeNonsense.Text = "Remove Nonsense";
+            this.removeNonsense.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1094, 555);
+            this.Controls.Add(this.removeNonsense);
             this.Controls.Add(this.ExportStats);
             this.Controls.Add(this.chainStats);
             this.Controls.Add(this.Output);
@@ -135,6 +147,7 @@
             this.Text = "Lyric Generator";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -149,6 +162,7 @@
         private System.Windows.Forms.RichTextBox chainStats;
         private System.Windows.Forms.Button ExportStats;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.CheckBox removeNonsense;
     }
 }
 
