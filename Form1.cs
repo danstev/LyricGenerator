@@ -328,6 +328,11 @@ namespace LyricGenerator
             Output.Text += "/n The previous word was not found in the dictionary.";
             return null;
         }
+
+        private bool checkNonsense()
+        {
+            return checkNonsense.Enabled;
+        }
     }
 
     public class Word
