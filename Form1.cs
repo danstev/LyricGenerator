@@ -319,6 +319,11 @@ namespace LyricGenerator
             return "Error";
         }
 
+        private bool checkNonsense()
+        {
+            return true;
+        }
+
         private Word getWord(string w)
         {
             foreach (Word b in dict)
@@ -329,10 +334,6 @@ namespace LyricGenerator
             return null;
         }
 
-        private bool checkNonsense()
-        {
-            return checkNonsense.Enabled;
-        }
     }
 
     public class Word
