@@ -334,7 +334,7 @@ namespace LyricGenerator
             {
                 if (b.word == w) return b;
             }
-            Output.Text += "/n The previous word was not found in the dictionary.";
+            Output.Text += "\nThe previous word was not found in the dictionary.";
             return null;
         }
 
@@ -345,9 +345,14 @@ namespace LyricGenerator
 
         private void displayDict()
         {
-            foreach(Word w in Dict)
+            foreach(Word w in dict)
             {
-
+                Input.Text += "\n";
+                Input.Text += w.word + ":" + w.freq;
+                foreach(Word t in w.listOfWord)
+                {
+                    Input.Text += "\t" + t.word + ":" + t.freq;
+                }
             }
         }
     }
