@@ -306,6 +306,10 @@ namespace LyricGenerator
                 if (w.freq > prev.freq)
                     MostUsed = w.word;
             }
+
+            chainStats.Text = "Word count: " + count;
+            chainStats.Text += "\nTotal words used: " + totalFreq;
+            chainStats.Text += "\nMost used word: " + MostUsed;
         }
 
         private string getPath()
