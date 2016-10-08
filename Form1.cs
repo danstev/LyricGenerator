@@ -338,6 +338,18 @@ namespace LyricGenerator
             return null;
         }
 
+        private void genChain_Click(object sender, EventArgs e)
+        {
+            readIntoTable();
+        }
+
+        private void displayDict()
+        {
+            foreach(Word w in Dict)
+            {
+
+            }
+        }
     }
 
     public class Word

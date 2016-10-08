@@ -38,6 +38,7 @@
             this.ExportStats = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.removeNonsense = new System.Windows.Forms.CheckBox();
+            this.genChain = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Input
@@ -129,11 +130,22 @@
             this.removeNonsense.Text = "Remove Nonsense";
             this.removeNonsense.UseVisualStyleBackColor = true;
             // 
+            // genChain
+            // 
+            this.genChain.Location = new System.Drawing.Point(207, 35);
+            this.genChain.Name = "genChain";
+            this.genChain.Size = new System.Drawing.Size(128, 23);
+            this.genChain.TabIndex = 9;
+            this.genChain.Text = "Generate Chain";
+            this.genChain.UseVisualStyleBackColor = true;
+            this.genChain.Click += new System.EventHandler(this.genChain_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1094, 555);
+            this.Controls.Add(this.genChain);
             this.Controls.Add(this.removeNonsense);
             this.Controls.Add(this.ExportStats);
             this.Controls.Add(this.chainStats);
@@ -163,6 +175,7 @@
         private System.Windows.Forms.Button ExportStats;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.CheckBox removeNonsense;
+        private System.Windows.Forms.Button genChain;
     }
 }
 
