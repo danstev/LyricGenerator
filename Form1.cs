@@ -340,7 +340,7 @@ namespace LyricGenerator
 
         private void genChain_Click(object sender, EventArgs e)
         {
-            readIntoTable();
+            addToChain();
         }
 
         private void displayDict()
@@ -355,6 +355,11 @@ namespace LyricGenerator
                 }
             }
         }
+
+        private void displayChain_Click(object sender, EventArgs e)
+        {
+            displayDict();
+        }
     }
 
     public class Word
@@ -367,8 +372,6 @@ namespace LyricGenerator
         {
             word = w;
             freq = f;
-            Word s = new Word(null,0);
-            listOfWord.Add(s);
         }
 
         int getTotalFreq()

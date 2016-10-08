@@ -39,6 +39,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.removeNonsense = new System.Windows.Forms.CheckBox();
             this.genChain = new System.Windows.Forms.Button();
+            this.displayChain = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Input
@@ -140,11 +141,22 @@
             this.genChain.UseVisualStyleBackColor = true;
             this.genChain.Click += new System.EventHandler(this.genChain_Click);
             // 
+            // displayChain
+            // 
+            this.displayChain.Location = new System.Drawing.Point(341, 35);
+            this.displayChain.Name = "displayChain";
+            this.displayChain.Size = new System.Drawing.Size(75, 23);
+            this.displayChain.TabIndex = 10;
+            this.displayChain.Text = "Display Chain";
+            this.displayChain.UseVisualStyleBackColor = true;
+            this.displayChain.Click += new System.EventHandler(this.displayChain_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1094, 555);
+            this.Controls.Add(this.displayChain);
             this.Controls.Add(this.genChain);
             this.Controls.Add(this.removeNonsense);
             this.Controls.Add(this.ExportStats);
@@ -176,6 +188,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.CheckBox removeNonsense;
         private System.Windows.Forms.Button genChain;
+        private System.Windows.Forms.Button displayChain;
     }
 }
 
