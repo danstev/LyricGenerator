@@ -41,6 +41,7 @@ namespace LyricGenerator
     {
         private List<Word> dict = new List<Word> { };
         private Word previous;
+        private string prevString;
         public int amountOfWords = 100;
 
         public MainForm()
@@ -60,6 +61,10 @@ namespace LyricGenerator
             foreach(string s in parsed)
             {
                 addToDict(s);
+                if (prevString == null)
+                {
+                    prevString = s;
+                }
             } 
         }
 
