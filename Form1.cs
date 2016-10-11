@@ -61,10 +61,11 @@ namespace LyricGenerator
             foreach(string s in parsed)
             {
                 addToDict(s);
-                if (prevString == null)
+                if (prevString != null)
                 {
-                    prevString = s;
+                    
                 }
+                prevString = s;
             } 
         }
 
