@@ -63,7 +63,7 @@ namespace LyricGenerator
                 addToDict(s);
                 if (prevString != null)
                 {
-                    
+                    addFreqToDict(s);
                 }
                 prevString = s;
             } 
