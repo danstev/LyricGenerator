@@ -41,7 +41,7 @@ namespace LyricGenerator
     {
         private List<Word> dict = new List<Word> { };
         private Word previous;
-        private string prevString;
+        
         public int amountOfWords = 100;
 
         public MainForm()
@@ -58,12 +58,14 @@ namespace LyricGenerator
         {
             string toParse = Input.Text;
             string[] parsed = toParse.Split(' ', ',', '.', '!', '?');
+            string prevString = "";
             foreach(string s in parsed)
             {
                 addToDict(s);
-                if (prevString != null)
+                if (prevString != "")
                 {
-                    addFreqToDict(s);
+                    Word current = getWord(s);
+                    current.addToListNext(prevString);
                 }
                 prevString = s;
             } 
@@ -390,13 +392,13 @@ namespace LyricGenerator
             return x;
         }
 
-        void addToListNext(Word w)
+        public void addToListNext(string s)
         {
-            if( checkWord(w.word) ) //Do this in this function, so its not done twice
+            if( checkWord(s) ) //Do this in this function, so its not done twice
             {
                 foreach (Word words in listOfWord)
                 {
-                    if( words.word == w.word)
+                    if( words.word == s)
                     {
                         words.freq++;
                         return;
@@ -405,18 +407,21 @@ namespace LyricGenerator
             }
             else
             {
-                Word add = new Word(w.word, 1);
+                Word add = new Word(s, 1);
                 listOfWord.Add(add);
             }
         }
 
         bool checkWord(string word) //Maybe unneeded
         {
-            foreach(Word w in listOfWord)
+            if ( !listOfWord.Any() )
             {
-                if(w.word == word)
+                foreach (Word w in listOfWord)
                 {
-                    return true;
+                    if (w.word == word)
+                    {
+                        return true;
+                    }
                 }
             }
             return false;
