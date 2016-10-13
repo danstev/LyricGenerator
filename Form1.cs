@@ -412,9 +412,9 @@ namespace LyricGenerator
             }
         }
 
-        bool checkWord(string word) //Maybe unneeded
+        bool checkWord(string word) 
         {
-            if ( !listOfWord.Any() )
+            if ( listOfWord.Count != 0 )
             {
                 foreach (Word w in listOfWord)
                 {
