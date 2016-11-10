@@ -414,7 +414,11 @@ namespace LyricGenerator
 
         bool checkWord(string word) 
         {
-            if ( listOfWord.Count != 0 )
+            if ( listOfWord == null )
+            {
+                return false;
+            }
+            else if (listOfWord.Count != 0)
             {
                 foreach (Word w in listOfWord)
                 {
@@ -423,6 +427,10 @@ namespace LyricGenerator
                         return true;
                     }
                 }
+            }
+            else 
+{
+                return false;
             }
             return false;
         }
